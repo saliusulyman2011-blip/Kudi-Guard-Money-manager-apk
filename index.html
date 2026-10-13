@@ -289,6 +289,33 @@
       color: var(--text-muted);
     }
 
+    .screenshots-section {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+
+.screenshots-gallery {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth momentum scroll on iOS */
+}
+
+.faq-img {
+  flex: 0 0 auto; /* Keeps image width intact without shrinking */
+  width: 200px;   /* Adjusted image size for mobile screens */
+  height: auto;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+
     @media (max-width: 768px) {
       .services-grid {
         grid-template-columns: 1fr;
@@ -328,6 +355,19 @@
         </div>
       </div>
     </section>
+
+        <section class="screenshots-section">
+  <h3>App Screenshots</h3>
+  <span class="pidgin">Check out how Kudi Guard look like inside your phone!</span>
+  
+  <div class="screenshots-gallery">
+    <img src="img1.jpg" alt="Kudi Guard Screenshot 1" class="faq-img">
+    <img src="img2.jpg" alt="Kudi Guard Screenshot 2" class="faq-img">
+    <img src="img3.jpg" alt="Kudi Guard Screenshot 3" class="faq-img">
+    <img src="img4.jpg" alt="Kudi Guard Screenshot 4" class="faq-img">
+    <img src="img5.jpg" alt="Kudi Guard Screenshot 5" class="faq-img">
+  </div>
+        </section>
 
     <section id="services">
       <h2>Our Services</h2>
